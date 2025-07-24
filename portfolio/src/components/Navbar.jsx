@@ -1,15 +1,14 @@
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { FaTimes, FaBars } from "react-icons/fa";
 
 const Navbar = () => {
   const [IsMenuOpen, setIsMenuOpen] = useState(false);
   const [IsSticky, setIsSticky] = useState(false);
+  const location = useLocation(); 
 
-  // Toggle Mobile Menu
   const togglemenu = () => setIsMenuOpen(!IsMenuOpen);
 
-  // Sticky Navbar
   useEffect(() => {
     const handleScroll = () => {
       setIsSticky(window.scrollY > 100);
@@ -18,7 +17,6 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Navigation Items
   const navItems = [
     { Link: "Home", path: "/" },
     { Link: "About", path: "/about" },
@@ -28,7 +26,7 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className={"fixed w-full top-0 left-0 z-50 transition-all duration-300 ease-in-out "}>
+    <nav className={"fixed w-full top-0 left-0 z-50 transition-all duration-300 ease-in-out"}>
       <div className="flex justify-between items-center py-4 px-6 lg:px-24">
         <Link to="/" className="flex items-center space-x-3">
           <img
@@ -37,13 +35,18 @@ const Navbar = () => {
             className="w-12 h-12 rounded-full object-cover animate-pulse shadow-md"
           />
         </Link>
+
         {/* Desktop Nav */}
         <div className="hidden md:flex space-x-10">
           {navItems.map((item, index) => (
             <Link
               key={index}
               to={item.path}
-              className="text-white text-lg font-medium hover:text-customBlue transition duration-300 "
+              className={`text-lg font-medium transition duration-300 ${
+                location.pathname === item.path
+                  ? "text-customBlue underline underline-offset-8"
+                  : "text-white hover:text-customBlue"
+              }`}
             >
               {item.Link}
             </Link>
@@ -66,7 +69,11 @@ const Navbar = () => {
               key={index}
               to={item.path}
               onClick={() => setIsMenuOpen(false)}
-              className="block text-customBlue text-lg font-semibold uppercase hover:text-white transition duration-300"
+              className={`block text-lg font-semibold uppercase transition duration-300 ${
+                location.pathname === item.path
+                  ? "text-customBlue underline underline-offset-4"
+                  : "text-white hover:text-customBlue"
+              }`}
             >
               {item.Link}
             </Link>

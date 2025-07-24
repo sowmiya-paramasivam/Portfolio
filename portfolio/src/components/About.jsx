@@ -6,10 +6,13 @@ const About = () => {
   return (
     <section className="min-h-screen bg-black text-white px-6 lg:px-24 py-12 flex flex-col gap-20 justify-center relative overflow-hidden animate-fadeIn">
       <img src="/mkm5.jpg" alt="bgimg" className="fixed inset-0 w-full h-full object-cover z-0" />
+      <h1 className="text-4xl md:text-5xl font-extrabold text-customBlue1 text-center font-leckerli z-10 mt-8">
+        About Me
+      </h1>
       {/* About Section */}
-      <div className="max-w-screen-xl flex flex-col lg:flex-row items-center justify-between">
-        {/* Profile Image with Rotating Border */}
-        <div className="lg:w-1/3 mb-8 lg:mb-0 flex justify-center items-center">
+      <div className="max-w-screen-xl w-full mx-auto flex flex-col lg:flex-row items-center justify-between z-10 gap-12">
+        {/* Profile Image */}
+        <div className="lg:w-1/3 flex justify-center items-center">
           <div className="relative w-[280px] h-[280px] lg:w-[320px] lg:h-[320px] flex items-center justify-center">
             <div className="absolute w-full h-full rounded-full p-3 animate-spin-slow">
               <div className="w-full h-full rounded-full bg-gradient-to-r from-red-500 via-yellow-500 via-green-500 via-blue-500 to-purple-500"></div>
@@ -28,7 +31,7 @@ const About = () => {
                   {/* Back Face */}
                   <div className="absolute w-full h-full backface-hidden rotate-y-180 rounded-full bg-black flex flex-col justify-center items-center text-white text-center p-4">
                     <h2 className="text-lg font-semibold">Sowmiya P</h2>
-                    <p className="text-xs mt-1">Athlete | Chess Player | Developer</p>
+                    <p className="text-xs mt-1"> Developer | Chess Player | Athlete </p>
                   </div>
                 </div>
               </div>
@@ -37,22 +40,18 @@ const About = () => {
         </div>
 
         {/* About Text */}
-        <div className="lg:w-2/3 space-y-6 mt-10 z-10">
-          <h1 className="text-4xl md:text-5xl font-extrabold text-customBlue1 mb-6 text-center lg:text-left font-leckerli">
-            About Me
-          </h1>
-          <p className="text-lg md:text-xl text-gray-300 text-center lg:text-left font-limelight">
+        <div className="lg:w-2/3 space-y-6 text-center lg:text-left font-inter">
+          <p className="text-lg md:text-xl text-gray-300 ">
             Hello! I'm a passionate and detail-oriented developer with experience in building responsive, fast, and modern websites.
           </p>
-          <p className="text-lg md:text-xl text-gray-300 text-center lg:text-left font-limelight">
+          <p className="text-lg md:text-xl text-gray-300 font-inter ">
             I specialize in front-end technologies like React, Tailwind CSS, and JavaScript, and I strive to create seamless user experiences. I enjoy solving complex problems and constantly learning new technologies.
           </p>
-          <p className="text-lg md:text-xl text-gray-300 text-center lg:text-left font-limelight">
+          <p className="text-lg md:text-xl text-gray-300 font-inter">
             When I'm not coding, you can find me experimenting with design, contributing to open-source projects, or exploring new web development trends.
           </p>
         </div>
       </div>
-
       {/* Skills Section */}
       <div className="relative z-10">
         <h1 className="text-4xl md:text-5xl font-extrabold text-customBlue1 text-center mb-12 font-leckerli">

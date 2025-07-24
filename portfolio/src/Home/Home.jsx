@@ -1,5 +1,6 @@
 import React from 'react';
 import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { Link } from 'react-router-dom';
 
 const Home = () => {
   return (
@@ -25,17 +26,15 @@ const Home = () => {
         <p className="text-lg md:text-xl text-gray-400 max-w-2xl mx-auto font-limelight">
           I'm a passionate Developer focused on building responsive, fast, and beautiful websites using modern technologies.
         </p>
-
-        {/* Resume Button */}
-        <a
-          href="/resume.pdf"
-          download
-          className="inline-flex items-center gap-2 bg-customBlue1 hover:bg-customBlue text-black font-bold py-3 px-8 rounded-full transition-all duration-300 mt-6"
-        >
-          Download Resume
-        </a>
-
-      </div>
+        <div className="mt-6">
+          <Link
+            to="/resume"
+            className="inline-block bg-blue-500 hover:bg-blue-400 text-black font-bold py-3 px-6 rounded-full transition-all duration-300"
+          >
+            View More About Me
+          </Link>
+        </div>
+       </div>
     </section>
   );
 };

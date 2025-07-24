@@ -70,17 +70,26 @@ const Resume = () => {
             </div>
           ))}
         </div>
-
+      <div className='flex flex-col sm:flex-row gap-6 justify-center items-center '>
         {/* Resume Download Button */}
         <a
           href="/resume.pdf"
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 bg-customBlue1 hover:bg-customBlue text-black font-bold py-3 px-6 rounded-full transition-all duration-300"
+          className="inline-flex items-center gap-4 bg-blue-500 hover:bg-blue-400 text-black font-bold py-3 px-6 rounded-full transition-all duration-300"
         >
           <FaFileDownload />
           VIEW MY RESUME
         </a>
+         {/* Resume Button */}
+        <a
+          href="/resume.pdf"
+          download
+          className="inline-flex items-center gap-4 bg-blue-500 hover:bg-blue-400 text-black font-bold py-3 px-6 rounded-full transition-all duration-300 "
+        >
+          DOWNLOAD RESUME
+        </a>
+        </div>
       </div>
     </section>
   );
