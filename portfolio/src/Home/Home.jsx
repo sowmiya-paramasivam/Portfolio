@@ -26,13 +26,20 @@ const Home = () => {
         <p className="text-lg md:text-xl text-gray-400 max-w-2xl mx-auto font-limelight">
           I'm a passionate Developer focused on building responsive, fast, and beautiful websites using modern technologies.
         </p>
-        <div className="mt-6">
+        <div className="mt-6 flex flex-col sm:flex-row gap-6 justify-center items-center">
           <Link
-            to="/resume"
-            className="inline-block bg-blue-500 hover:bg-blue-400 text-black font-bold py-3 px-6 rounded-full transition-all duration-300"
+            to="/about"
+            className="inline-block bg-blue-500 hover:bg-blue-400 text-white font-bold py-3 px-6 rounded-full transition-all duration-300"
           >
             View More About Me
           </Link>
+          <a
+          href="/resume.pdf"
+          download
+          className="inline-flex items-center gap-4 bg-blue-500 hover:bg-blue-400 text-white font-bold py-3 px-6 rounded-full transition-all duration-300 "
+        >
+          Download Resume
+        </a>
         </div>
        </div>
     </section>

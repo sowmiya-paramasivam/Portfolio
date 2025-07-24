@@ -7,11 +7,9 @@ import Home from "../Home/Home";
 import About from "../components/About";
 import Projects from "../components/Projects";
 import Contact from "../components/Contact";
-import Resume from "../components/Resume";
 
 
-
-  const router = createBrowserRouter([
+const router = createBrowserRouter([
     {
       path: "/",
       element: <App/>,
@@ -27,10 +25,6 @@ import Resume from "../components/Resume";
         {
             path:"/projects",
             element:<Projects/>
-        },
-        {
-            path:"/resume",
-            element:<Resume/>
         },
         {
             path:"/contact",
