@@ -26,30 +26,31 @@ const Projects = () => {
 
   return (
     <section className=" mt-10 min-h-screen flex flex-col items-center justify-center bg-black text-white px-6 lg:px-24 py-12 relative overflow-hidden animate-fadeIn">
+       <img src="/mkm5.jpg" alt="bgimg" className="fixed inset-0 w-full h-full object-cover z-0" />
       {/* Title */}
-      <h1 className="text-4xl md:text-5xl font-extrabold text-pink-400 mb-10">
+      <h1 className="text-4xl md:text-5xl font-extrabold text-customBlue1 mb-10 font-leckerli z-10">
         Projects
       </h1>
 
       {/* Projects Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-10 w-full max-w-6xl">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-10 w-full max-w-6xl font-edu">
         {projects.map((project, index) => (
           <div
             key={index}
-            className="bg-gray-900 bg-opacity-50 rounded-2xl p-6 shadow-lg backdrop-blur-md border border-gray-700 hover:scale-[1.02] transition-transform duration-300"
+            className="bg-gray-900 bg-opacity-50 rounded-2xl p-6 shadow-lg backdrop-blur-md border border-gray-500 hover:scale-[1.02] transition-transform duration-300"
           >
             <img
               src={project.image}
               alt={project.title}
-              className="w-full h-64 object-cover rounded-xl mb-6 border border-pink-500"
+              className="w-full h-64 object-cover rounded-xl mb-6 border border-blue-900"
             />
-            <h2 className="text-2xl font-bold text-pink-300 mb-2">{project.title}</h2>
+            <h2 className="text-2xl font-bold text-blue-500 mb-2">{project.title}</h2>
             <p className="text-gray-300 mb-4">{project.description}</p>
             <a
               href={project.link}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block px-6 py-2 bg-pink-600 text-white rounded-full hover:bg-pink-500 transition duration-300"
+              className="inline-block px-6 py-2 bg-customBlue1 text-white rounded-full hover:bg-customBlue transition duration-300"
             >
               View Project
             </a>

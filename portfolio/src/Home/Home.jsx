@@ -4,27 +4,33 @@ import { FaGithub, FaLinkedin } from "react-icons/fa";
 const Home = () => {
   return (
     <section className="min-h-screen flex items-center justify-center bg-black relative overflow-hidden px-6 lg:px-24">
-      {/* Animated Background Circles */}
-      <div className="absolute top-0 left-0 w-full h-full">
-        <div className="absolute w-72 h-72 bg-green-700 opacity-30 rounded-full mix-blend-multiply filter blur-3xl animate-pulse top-20 left-10"></div>
-        <div className="absolute w-72 h-72 bg-green-500 opacity-20 rounded-full mix-blend-multiply filter blur-2xl animate-spin-slow top-40 right-10"></div>
-        <div className="absolute w-80 h-80 bg-green-400 opacity-10 rounded-full mix-blend-multiply filter blur-2xl animate-ping bottom-10 left-20"></div>
-      </div>
+      {/* <img src="/mkm5.jpg" alt="bgimg" className="fixed inset-0 w-full h-50 object-cover z-0" /> */}
+       <video
+        className="fixed inset-0 w-full h-50 object-cover z-0"
+        src="/video.mp4" 
+        autoPlay
+        loop
+        muted
+        playsInline
+      />
+      {/* Main Content */}
+      <div className="relative z-20 text-center space-y-8 text-white animate-fadeIn">
+        <h1 className="text-5xl md:text-7xl font-emilys text-customBlue1 object-cover animate-pulse shadow-md">
+          Hy! This is <br />
+          <span className="inline-block font-edu text-white border-r-2 border-white whitespace-nowrap overflow-hidden w-[7ch] animate-typing animate-blink">
+            Sowmiya...
+          </span>
+          </h1>
 
-      {/* Content */}
-      <div className="text-center space-y-8 relative z-10 animate-fadeIn">
-        <h1 className="text-5xl md:text-7xl font-extrabold text-green-400">
-          Welcome to My World
-        </h1>
-        <p className="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto">
-          I'm a passionate Developer focused on building responsive, fast, and beautiful websites with modern technologies.
+        <p className="text-lg md:text-xl text-gray-400 max-w-2xl mx-auto font-limelight">
+          I'm a passionate Developer focused on building responsive, fast, and beautiful websites using modern technologies.
         </p>
 
-        {/* Download Resume Button */}
+        {/* Resume Button */}
         <a
           href="/resume.pdf"
           download
-          className="inline-block bg-green-500 hover:bg-green-600 text-black font-bold py-3 px-8 rounded-full transition-all duration-300 mt-8"
+          className="inline-flex items-center gap-2 bg-customBlue1 hover:bg-customBlue text-black font-bold py-3 px-8 rounded-full transition-all duration-300 mt-6"
         >
           Download Resume
         </a>

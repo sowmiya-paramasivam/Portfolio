@@ -23,26 +23,27 @@ const Navbar = () => {
     { Link: "Home", path: "/" },
     { Link: "About", path: "/about" },
     { Link: "Projects", path: "/projects" },
-    {Link:"Resume",path:"/resume"},
+    { Link: "Resume", path: "/resume" },
     { Link: "Contact", path: "/contact" },
-    { Link: "Blog", path: "/blog" },
   ];
 
   return (
-    <nav className={`fixed w-full top-0 left-0 z-50 transition-all duration-300 ease-in-out ${IsSticky ? "bg-black shadow-lg" : "bg-gradient-to-r from-black to-green-700"}`}>
+    <nav className={"fixed w-full top-0 left-0 z-50 transition-all duration-300 ease-in-out "}>
       <div className="flex justify-between items-center py-4 px-6 lg:px-24">
-        {/* Logo */}
-        <Link to="/" className="text-3xl font-extrabold text-green-400 animate-pulse">
-          MyPortfolio
+        <Link to="/" className="flex items-center space-x-3">
+          <img
+            src="/S.png"
+            alt="Logo"
+            className="w-12 h-12 rounded-full object-cover animate-pulse shadow-md"
+          />
         </Link>
-
         {/* Desktop Nav */}
         <div className="hidden md:flex space-x-10">
           {navItems.map((item, index) => (
             <Link
               key={index}
               to={item.path}
-              className="text-white text-lg font-medium hover:text-green-400 transition duration-300 uppercase"
+              className="text-white text-lg font-medium hover:text-customBlue transition duration-300 "
             >
               {item.Link}
             </Link>
@@ -51,7 +52,7 @@ const Navbar = () => {
 
         {/* Mobile Menu Icon */}
         <div className="md:hidden">
-          <button onClick={togglemenu} className="text-green-400 focus:outline-none">
+          <button onClick={togglemenu} className="text-white focus:outline-none">
             {IsMenuOpen ? <FaTimes className="h-6 w-6 animate-spin" /> : <FaBars className="h-6 w-6" />}
           </button>
         </div>
@@ -65,7 +66,7 @@ const Navbar = () => {
               key={index}
               to={item.path}
               onClick={() => setIsMenuOpen(false)}
-              className="block text-green-400 text-lg font-semibold uppercase hover:text-white transition duration-300"
+              className="block text-customBlue text-lg font-semibold uppercase hover:text-white transition duration-300"
             >
               {item.Link}
             </Link>

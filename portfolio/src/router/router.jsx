@@ -7,7 +7,6 @@ import Home from "../Home/Home";
 import About from "../components/About";
 import Projects from "../components/Projects";
 import Contact from "../components/Contact";
-import Blog from "../components/Blog";
 import Resume from "../components/Resume";
 
 
@@ -36,10 +35,6 @@ import Resume from "../components/Resume";
         {
             path:"/contact",
             element:<Contact/>
-        },
-        {
-            path:"/blog",
-            element:<Blog/>
         },
       ]
     },
