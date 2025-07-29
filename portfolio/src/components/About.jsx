@@ -60,11 +60,11 @@ const About = () => {
               <div className="relative w-full h-full group">
                 <div className="w-full h-full transition-transform duration-700 transform-style-preserve-3d group-hover:rotate-y-180 relative">
                   {/* Front Face */}
-                  <div className="absolute w-full h-full backface-hidden rounded-full bg-black flex justify-center items-center">
+                  <div className="absolute w-full h-full backface-hidden rounded-full bg-black overflow-hidden">
                     <img
                       src="/sowmi.png"
                       alt="About Me"
-                      className="w-full h-full rounded-full object-cover shadow-2xl"
+                      className="w-full h-full object-cover object-center "
                     />
                   </div>
                   {/* Back Face */}
